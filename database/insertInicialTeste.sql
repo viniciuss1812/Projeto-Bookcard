@@ -19,10 +19,8 @@ Insert CAPITULO (CAPDESCRICAO, LIVID) values ('O mundo coberto de penas',2)
 Insert CAPITULO (CAPDESCRICAO, LIVID) values ('Fuga',2)
 --select * from capitulo
 go
-insert LISTACARD (LISNOME,LISOVERVIEW,CAPID) values ('Infelicidade',null, 1)
-insert LISTACARD (LISNOME,LISOVERVIEW,CAPID) values ('Desgraça',null, 1)
 --select * from LISTACARD
-Insert CARDTEXTO (CARTEXTO,LISID) values (
+Insert CARDTEXTO (CARTEXTO,CAPID) values (
     'Na planície avermelhada os juazeiros alargavam duas manchas verdes.
 	  Os infelizes tinham caminhado o dia inteiro, estavam cansados e 
 	  famintos. Ordinariamente andavam pouco, mas como haviam repousado 
@@ -30,7 +28,7 @@ Insert CARDTEXTO (CARTEXTO,LISID) values (
 	  Fazia horas que procuravam uma sombra. A folhagem dos juazeiros apareceu 
 	  longe, através dos galhos pelados da catinga rala',
 	1)
---select * from CARDTEXTO
+select * from CARDTEXTO
 
 
 
