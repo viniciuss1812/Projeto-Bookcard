@@ -17,7 +17,7 @@ namespace BookCard.DAL
         }
         public List<CARDTEXTO> TextodoCard()
         {
-            string sql = "select * from CARDTEXTO;";
+            string sql = "select  CARTEXTO from CARDTEXTO where CARID=1 ;";
             var dados = (List<CARDTEXTO>)conexao.Query<CARDTEXTO>(sql);
             return dados;
         }

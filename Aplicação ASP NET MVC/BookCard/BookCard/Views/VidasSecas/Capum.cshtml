@@ -3,14 +3,41 @@
 *@
 @{
 }
-<body class="card" style=" width: 900px; height : 800px">
 
-    @foreach (var item in ViewBag.textoinicial)
-    {
-      <p>@item.CARTEXTO</p>
-      <p>@item.CAPID</p>
-    }
-    
+<div id="divBody" class="divBody">
+    <div id="divEsquerda" class="secoesBody">
+        dd
+    </div>
+    <div id="divDireita" class="secoesBody">
+        <div id="cabecalhoCard" class="itemCard">-</div>
+        <div id="textoCard" class="itemCard">
+            -
+            @foreach (var item in ViewBag.textoinicial)
+            {
+                <p>@item.CARTEXTO</p>
+
+            }
+
+        </div>
+        <div id="rodapeCard" class="itemCard">
+            <div id="rodapeEsquerda" class="itemRodape">
+                <span class="material-symbols-outlined botoesNavegar">
+                    arrow_circle_left
+                </span>
+
+            </div>
+            <div id="rodapeCentro" class="itemRodape"></div>
+
+            <div id="rodapeDireita" class="itemRodape">
+                <span class="material-symbols-outlined botoesNavegar">
+                    arrow_circle_right
+                </span>
+            </div>
 
 
-</body>
+
+
+        </div>
+    </div>
+</div>
+

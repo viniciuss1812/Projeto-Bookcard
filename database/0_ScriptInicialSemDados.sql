@@ -19,8 +19,8 @@ Create table CAPITULO(
 )
 
 select * from CAPITULO;
-update CAPITULO set CAPDESCRICAO = 'O livro começa com Fabiano e sua família se arrastando pela caatinga seca.' where CAPID = 7
-insert into CAPITULO(CAPDESCRICAO,LIVID) values ('O livro começa com Fabiano',1);
+
+insert into CAPITULO(CAPDESCRICAO,LIVID) values ('O livro começa com Fabiano e sua família se arrastando pela caatinga seca.',1);
 go
 
 
@@ -29,6 +29,7 @@ Create table CARDTEXTO(
   CARTEXTO varchar(max) not null,  
 ) 
 
+select  CARTEXTO from CARDTEXTO where CARID=1 ;
 select * from CARDTEXTO;
 insert into CARDTEXTO(CARTEXTO, CAPID) values ('Na planície avermelhada os juazeiros alargavam duas manchas verdes. Os
 infelizes tinham caminhado o dia inteiro, estavam cansados e famintos.
@@ -41,7 +42,7 @@ escanchado no quarto e o baú de folha na cabeça, Fabiano sombrio, cambaio, o aió
 tiracolo, a cuia pendurada numa correia presa ao cinturão, a espingarda de
 pederneira no ombro. O menino mais velho e a cachorra Baleia iam atrás.
 Os juazeiros aproximaram-se, recuaram, sumiram-se. O menino mais velho
-pôs-se a chorar, sentou-se no chão.',7);
+pôs-se a chorar, sentou-se no chão.',1);
 
 
 
@@ -59,7 +60,7 @@ queria responsabilizar alguém pela sua desgraça. A seca aparecia-lhe como um fat
 necessário – e a obstinação da criança irritava-o. Certamente esse obstáculo miúdo
 não era culpado, mas dificultava a marcha, e o vaqueiro precisava chegar, não sabia
 onde. Tinham deixado os caminhos, cheios de espinho e seixos, fazia horas que
-pisavam a margem do rio, a lama seca e rachada que escaldava os pés.',7);
+pisavam a margem do rio, a lama seca e rachada que escaldava os pés.',1);
 
  insert into CARDTEXTO (CARTEXTO, CAPID) values ('Pelo espírito atribulado do sertanejo passou a idéia de abandonar o filho
 naquele descampado. Pensou nos urubus, nas ossadas, coçou a barba ruiva e suja,
@@ -71,7 +72,7 @@ desapareceu e Fabiano teve pena. Impossível abandonar o anjinho aos bichos do
 mato. Entregou a espingarda a Sinha Vitória, pôs o filho no cangote, levantou-se,
 agarrou os bracinhos que lhe caíam sobre o peito, moles, finos como cambitos. Sinha
 Vitória aprovou esse arranjo, lançou de novo a interjeição gutural, designou os
-juazeiros invisíveis.',7)
+juazeiros invisíveis.',1)
 
 insert into CARDTEXTO (CARTEXTO, CAPID) values ('E a viagem prosseguiu, mais lenta, mais arrastada, num silêncio grande.
 Ausente do companheiro, a cachorra Baleia tomou a frente do grupo.
@@ -98,7 +99,7 @@ tangendo um gado inexistente, e latia arremedando a cachorra.
 As manchas dos juazeiros tornaram a aparecer, Fabiano aligeirou o passo,
 esqueceu a fome, a canseira e os ferimentos. As alpercatas dele estavam gastas nos
 saltos, e a embira tinha-lhe aberto entre os dedos rachaduras muito dolorosas. Os
-calcanhares, duros como cascos, gretavam-se e sangravam.',7)
+calcanhares, duros como cascos, gretavam-se e sangravam.',1)
 
 insert into CARDTEXTO (CARTEXTO, CAPID) values ('Num cotovelo do caminho avistou um canto de cerca, encheu-o a esperança de
 achar comida, sentiu desejo de cantar. A voz saiu-lhe rouca, medonha. Calou-se para
@@ -127,7 +128,7 @@ los. Foi apanhar gravetos, trouxe do chiqueiro das cabras uma braçada de madeira
 meio roída pelo cupim, arrancou touceiras de macambira, arrumou tudo para a
 fogueira.
 Nesse ponto Baleia arrebitou as orelhas, arregaçou as ventas, sentiu cheiro de
-preás, farejou um minuto, localizou-os no morro próximo e saiu correndo.',7);
+preás, farejou um minuto, localizou-os no morro próximo e saiu correndo.',1);
 
 
 
@@ -157,6 +158,7 @@ add  LIVAUTOR VARCHAR(100) null
 go
 
 ALTER TABLE CARDTEXTO
+--select * from CARDTEXTO;
 add  CAPID INT NOT NULL
 GO
 ALTER TABLE CARDTEXTO
@@ -173,3 +175,7 @@ CREATE TABLE PALAVRADESTAQUE (
 										 or PADPRIORIDADE=13)
 )
 
+
+
+
+select top 1 * from CARDTEXTO
